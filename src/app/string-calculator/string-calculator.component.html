@@ -1,0 +1,17 @@
+<div>
+    <form (submit)="onSubmit()">
+        <label for="numbers">Enter numbers:</label>
+        <input type="text" id="numbers" [(ngModel)]="inputNumbers" name="numbers"
+            placeholder="Enter numbers (comma-separated)" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <div *ngIf="errorMessage" class="error">
+        <p>{{ errorMessage }}</p>
+    </div>
+
+    <div *ngIf="result !== null" class="result">
+        <h3>Result: {{ result }}</h3>
+    </div>
+</div>

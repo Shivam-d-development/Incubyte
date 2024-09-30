@@ -17,13 +17,15 @@ describe('AppComponent', () => {
   it(`should have the 'string-calculator' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('string-calculator');
+    expect(app.title).toEqual('string-calculator'); 
   });
 
-  it('should render title', () => {
+  it('should render title in <h2> tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, string-calculator');
+    expect(compiled.querySelector('h2')?.textContent).toContain(
+      'String Calculator'
+    );
   });
 });
